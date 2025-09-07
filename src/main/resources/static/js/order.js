@@ -1,5 +1,5 @@
 function loadOrders() {
-fetch("http://localhost:8082/orders")
+fetch("https://order-service-app.herokuapp.com/orders")
     .then(response => response.json())
     .then(orders => {
       var listDiv = document.getElementById("order-list");
@@ -26,7 +26,7 @@ fetch("http://localhost:8082/orders")
 }
  
 function removeOrder(id) {
-fetch("http://localhost:8082/orders/" + id, {
+fetch("https://order-service-app.herokuapp.com/orders/" + id, {
         method: "DELETE"
     })
     .then(response => {

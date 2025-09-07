@@ -1,5 +1,5 @@
 function loadProducts() {
-fetch("http://localhost:8081/products")
+fetch("https://product-service-app.herokuapp.com/products"")
     .then(response => response.json())
     .then(products => {
       var listDiv = document.getElementById("product-list");
@@ -29,7 +29,7 @@ fetch("http://localhost:8081/products")
 }
  
 function addToOrders(productId) {
-fetch("http://localhost:8082/orders", {
+fetch("https://order-service-app.herokuapp.com/orders", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
